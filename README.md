@@ -41,7 +41,7 @@ This demo solves those problems by showing:
 - Anyone preparing for complex Flutter apps (production-grade)  
 
 ## 📑 SDK Requirements
-- Flutter SDK 3.29.2
+- Flutter SDK 3.47.6 (Dart 3.13.5)
 
 ## 🛠️ Installation
 - Clone the project
@@ -49,16 +49,16 @@ This demo solves those problems by showing:
 - And Run the project
 
 ## 🧪 Unit Test & Widget Test
-For the testing I used test, bloc_test, and mockito
+For the testing I used flutter_test and mockito
 - In-order to run the test you can run using `flutter test` to run all the test cases.
 - If you want to run individual test case, please add the file path behind the command `flutter test {full_path}`
 - All our test cases will be under `test/`
 
 ## 🚧 Backlogs
 - ✅ To integrate the offline mode with local db in Data
-- 🔘 To complete data unit tests
-- 🔘 To complete domain unit tests
-- 🔘 To complete bloc widget tests
+- ✅ To complete data unit tests
+- ✅ To complete domain unit tests
+- ✅ To complete bloc widget tests
 - 🔘 To integrate with Riverpod in presentation layer
 - 🔘 UI/UX Improvements
 - 🔘 Country list screen.
