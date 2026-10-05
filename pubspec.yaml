@@ -39,6 +39,7 @@ dependencies:
   # Dependencies Injection
   get_it: ^9.3.0
   flutter_bloc: ^9.1.1
+  flutter_riverpod: ^3.4.3
   dio: ^5.11.1
   equatable: ^3.0.0
   

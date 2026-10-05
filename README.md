@@ -59,7 +59,7 @@ For the testing I used flutter_test and mockito
 - ✅ To complete data unit tests
 - ✅ To complete domain unit tests
 - ✅ To complete bloc widget tests
-- 🔘 To integrate with Riverpod in presentation layer
+- ✅ To integrate with Riverpod in presentation layer
 - 🔘 UI/UX Improvements
 - 🔘 Country list screen.
 - 🔘 University detail screen navigation.
