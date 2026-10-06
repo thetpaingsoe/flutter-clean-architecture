@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/features/university/presentation/bloc/pages/university_list_page.dart';
 import 'package:flutter_clean_architecture/features/university/presentation/riverpod/pages/university_list_riverpod_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 
 import 'core/di/injections.dart';
 
 void main() async {
+  // Local cache must be ready before injections are registered.
+  await Hive.initFlutter();
+
   // Init Injections
   await initInjections();
 

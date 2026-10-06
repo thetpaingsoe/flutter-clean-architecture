@@ -1,7 +1,4 @@
-import 'package:flutter_clean_architecture/core/config/config.dart';
-import 'package:flutter_clean_architecture/core/config/constants.dart';
 import 'package:flutter_clean_architecture/features/country/data/datasources/local/country_local_data_source.dart';
-import 'package:flutter_clean_architecture/features/country/data/datasources/remote/country_remote_data_source.dart';
 
 import '../../core/di/injections.dart';
 import 'data/datasources/country_data_source.dart';
@@ -10,12 +7,10 @@ import 'domain/repositories/country_repository.dart';
 import 'domain/usecases/get_all_country_usecase.dart';
 
 initCountryInjection() {
-  // Init DataSouce Based on the DataScoure Config
-  if (Config.dataSource == DataSource.remote) {
-    di.registerSingleton<CountryDataSource>(CountryRemoteDataSourceImpl());
-  } else {
-    di.registerSingleton<CountryDataSource>(CountryLocalDataSourceImpl());
-  }
+  // The country list is static data served from the local data source.
+  // (The remote counterpart is still a stub — see
+  // country_remote_data_source.dart.)
+  di.registerSingleton<CountryDataSource>(CountryLocalDataSourceImpl());
 
   // Init Repo and UseCases
   di.registerSingleton<CountryRepository>(

@@ -8,8 +8,12 @@ import 'dart:async' as _i5;
 
 import 'package:flutter_clean_architecture/core/network/api_response.dart'
     as _i2;
+import 'package:flutter_clean_architecture/features/university/data/datasources/cache/university_cache_data_source.dart'
+    as _i7;
 import 'package:flutter_clean_architecture/features/university/data/datasources/university_data_source.dart'
     as _i3;
+import 'package:flutter_clean_architecture/features/university/domain/entities/params/search_university_params.dart'
+    as _i8;
 import 'package:flutter_clean_architecture/features/university/domain/entities/university.dart'
     as _i6;
 import 'package:mockito/mockito.dart' as _i1;
@@ -86,4 +90,39 @@ class MockUniversityDataSource extends _i1.Mock
                 ),
           )
           as _i5.Future<_i2.ApiResponse<List<_i6.University>>>);
+}
+
+/// A class which mocks [UniversityCacheDataSource].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockUniversityCacheDataSource extends _i1.Mock
+    implements _i7.UniversityCacheDataSource {
+  MockUniversityCacheDataSource() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i5.Future<void> saveSearch({
+    required _i8.SearchUniversityParams? params,
+    required List<_i6.University>? universities,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#saveSearch, [], {
+              #params: params,
+              #universities: universities,
+            }),
+            returnValue: _i5.Future<void>.value(),
+            returnValueForMissingStub: _i5.Future<void>.value(),
+          )
+          as _i5.Future<void>);
+
+  @override
+  _i5.Future<List<_i6.University>?> getSearch({
+    required _i8.SearchUniversityParams? params,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#getSearch, [], {#params: params}),
+            returnValue: _i5.Future<List<_i6.University>?>.value(),
+          )
+          as _i5.Future<List<_i6.University>?>);
 }

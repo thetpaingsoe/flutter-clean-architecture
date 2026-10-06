@@ -1,5 +1,3 @@
-import 'package:flutter_clean_architecture/core/config/constants.dart';
-
 class Config {
   // Debug Mode ON/OFF
   // When you off this mode, it will not show you the debug information
@@ -10,8 +8,6 @@ class Config {
   static const int limit = 30;
   static const int offset = 0;
 
-  // Data Source Config : Server / Local
-  // This is control that is using to switch between server and local datasource.
-  // But for your real case, you need to implment the control that meet your requirement.
-  static const DataSource dataSource = DataSource.remote;
+  // Offline-first is handled by the repositories (remote -> cache ->
+  // bundled asset), so no manual data-source switch is needed.
 }
